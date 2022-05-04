@@ -27,7 +27,7 @@ console.log(
 // Task 4
 let isInspector = confirm("Вы проверяете мою работу?");
 let inspectorName;
-if (isInspector === true) {
+if (isInspector) {
   inspectorName = prompt("Как Вас зовут?");
   console.log("Task 4 result: ", `Мою работу проверяет ${inspectorName}`);
 } else {
