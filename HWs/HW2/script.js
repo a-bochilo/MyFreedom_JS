@@ -109,3 +109,17 @@ let userPassword2;
       ? alert("Здравствуйте")
       : alert("Неверный пароль"))
   : alert("Я вас не знаю");
+
+// let userLogin3 = prompt("Test 4.3. Введите логин", "");
+// let userPassword3;
+// let verificationResult = !userLogin2
+//   ? "Отменено"
+//   : userLogin3 === "Админ"
+//   ? ((userPassword3 = prompt("Введите пароль", "")),
+//     !userPassword3
+//       ? "Отменено"
+//       : userPassword3 === "Я главный"
+//       ? "Здравствуйте"
+//       : "Неверный пароль")
+//   : "Я вас не знаю";
+// alert(verificationResult);
