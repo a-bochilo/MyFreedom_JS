@@ -18,7 +18,7 @@ console.log("Test 2 control: ", e, f, x, y);
 
 //Test 3
 let yearFootballChemp = prompt(
-  "Введите год, в котором хотите узнать чемпиона по футболу",
+  "Test 3.1. Введите год, в котором хотите узнать чемпиона по футболу",
   ""
 );
 if (!yearFootballChemp) {
@@ -51,7 +51,7 @@ if (!yearFootballChemp) {
 
 // Test 3 option 2
 let yearFootballChemp2 = prompt(
-  "Введите год, в котором хотите узнать чемпиона по футболу",
+  "Test 3.2. Введите год, в котором хотите узнать чемпиона по футболу",
   ""
 );
 let messageFootballChemp2 = !yearFootballChemp2
@@ -80,7 +80,7 @@ let messageFootballChemp2 = !yearFootballChemp2
 alert(messageFootballChemp2);
 
 // Test 4
-let userLogin = prompt("Введите логин", "");
+let userLogin = prompt("Test 4.1. Введите логин", "");
 let userPassword;
 if (!userLogin) {
   alert("Отменено");
@@ -96,3 +96,16 @@ if (!userLogin) {
 } else {
   alert("Я вас не знаю");
 }
+
+let userLogin2 = prompt("Test 4.2. Введите логин", "");
+let userPassword2;
+!userLogin2
+  ? alert("Отменено")
+  : userLogin2 === "Админ"
+  ? ((userPassword2 = prompt("Введите пароль", "")),
+    !userPassword2
+      ? alert("Отменено")
+      : userPassword2 === "Я главный"
+      ? alert("Здравствуйте")
+      : alert("Неверный пароль"))
+  : alert("Я вас не знаю");
