@@ -112,7 +112,7 @@ let userPassword2;
 
 // let userLogin3 = prompt("Test 4.3. Введите логин", "");
 // let userPassword3;
-// let verificationResult = !userLogin2
+// let verificationResult = !userLogin3
 //   ? "Отменено"
 //   : userLogin3 === "Админ"
 //   ? ((userPassword3 = prompt("Введите пароль", "")),
