@@ -132,6 +132,8 @@ switch (yearFootballChemp3) {
   case 2022:
     messageFootballChemp3 = "Сезон еще идет";
     break;
+  default:
+    messageFootballChemp3 = "За этот период нет статистики";
 }
 // console.log(messageFootballChemp3);
 alert(messageFootballChemp3 + "\nПросьба почитать комментарии в теле кода");
