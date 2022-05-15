@@ -124,9 +124,7 @@ let animalObj = {
   color: "black",
 };
 
-function animal(obj) {
-  return `This ${obj.color} ${obj.name} has ${obj.legs} legs`;
-}
+let animal = (obj) => `This ${obj.color} ${obj.name} has ${obj.legs} legs`;
 
 console.log(animal(animalObj));
 
@@ -135,10 +133,11 @@ console.log(animal(animalObj));
 // равно 0, то оно четное.
 let checkIsEvenMultiply2 = (num1, num2, funcTrue, funcFalse) =>
   (num1 * num2) % 2 === 0 ? funcTrue() : funcFalse();
-let funcTrue = () => console.log(`Test 8: multiplication result is even`);
-let funcFalse = () => console.log(`Test 8: multiplication result is odd`);
+let showEvenMessage = () =>
+  console.log(`Test 8: multiplication result is even`);
+let showOddMessage = () => console.log(`Test 8: multiplication result is odd`);
 
-checkIsEvenMultiply2(0, 9, funcTrue, funcFalse);
+checkIsEvenMultiply2(0, 9, showEvenMessage, showOddMessage);
 
 // Test 9
 let student9 = {
