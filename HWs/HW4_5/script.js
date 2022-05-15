@@ -1,4 +1,6 @@
 "use strict";
+// Всевозможные проверки на корректность значений не плодил.
+// Посчитал, что цель данного дз не в этом
 
 // Test 1
 function howManyDays(month) {
@@ -45,9 +47,10 @@ let student = {
   englishLangLevel: "B1+",
 };
 
-console.log(`Test 3 before: ${student}`);
+console.log("Test 3 before:");
+console.log(student);
 delete student.englishLangLevel;
-console.log(`Test 3 after: ${student}`);
+console.log("Test 3 after:");
 
 // Test 4
 let book = {
@@ -153,7 +156,7 @@ let student9 = {
   },
 };
 student9.showMessage();
-console.log(student9.name);
+console.log(student9.name); // Регистр в исходном объекте остался прежним
 
 // Test 10
 function Animal(type, legs, isPredator, name) {
