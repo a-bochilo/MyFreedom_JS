@@ -44,8 +44,25 @@ console.log(
 // Я как-то не понял, куда здесь можно rest оператор использовать
 let filterUniqValArr = (arr) => Array.from(new Set(arr));
 let arr5 = [1, 2, 3, 3, 2, 5, 7, 1, 4];
-console.log("Test 5:");
+console.log("Test 5.1:");
 console.log(filterUniqValArr(arr5));
+
+// Допилил задание с использованием rest оператора так, как понял сам
+// функция может принимать сколько угодно массивов и делать из них
+// один массив с уникальными значениями
+let filterUniqValArr2 = (...arr) =>
+  Array.from(
+    new Set(
+      arr.reduce((acc, item) => {
+        acc.push(...item);
+        return acc;
+      }, [])
+    )
+  );
+let arr51 = [1, 2, 3, 3, 2, 5, 7, 1, 4];
+let arr52 = [1, 2, 3, 3, 2, 5, 7, 1, 4, 15, 17, 6];
+console.log("Test 5.2:");
+console.log(filterUniqValArr2(arr51, arr52));
 
 // Test 6
 const weather = {
