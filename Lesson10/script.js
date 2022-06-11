@@ -57,6 +57,7 @@ const ourMap = new Map(entries);
 // const arr = [...ourMap];
 // console.log(arr);
 // const mapObj = Object.fromEntries(ourMap.entries());
+// console.log(mapObj);
 
 // const students = [{ name: "Ivan" }, { name: "Alex" }];
 
