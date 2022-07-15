@@ -1,0 +1,60 @@
+.btn {
+  padding: 15px 45px;
+  border-radius: 100px;
+  @include fontstyle($main-font, 17, 22, $color-dark-3xl);
+  letter-spacing: 0.06em;
+}
+
+.btn-primary {
+  background-color: $color-primary;
+}
+
+.btn-secondary {
+  border: 2px solid $color-primary;
+}
+
+.btn-arrow {
+  width: 52px;
+  height: 52px;
+  border: 2px solid $color-primary;
+  border-radius: 50%;
+  position: relative;
+  margin: 20px 0;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.btn-arrow-r img {
+  transform: rotate(-180deg) translate(50%, 50%);
+}
+
+.btn-pages {
+  width: 52px;
+  height: 52px;
+  border: 2px solid $color-primary;
+  border-radius: 50%;
+  @include fontstyle($main-font, 20, 23, $color-dark-3xl);
+  letter-spacing: 0.06em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-disabled {
+  border-color: $color-dark-s;
+  color: $color-dark-s;
+  cursor: auto;
+}
+.btn-pages-active {
+  background-color: $color-primary;
+}
+
+.btn:hover,
+.btn-arrow:hover,
+.btn-pages:hover:not(.btn-disabled) {
+  background-color: $color-primary-light;
+  border-color: transparent;
+}

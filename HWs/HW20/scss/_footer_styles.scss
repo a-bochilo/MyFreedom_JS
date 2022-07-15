@@ -1,0 +1,64 @@
+footer {
+  background: $header-footer-gradient;
+  .maincontainer {
+    min-height: 350px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    > img {
+      align-self: flex-end;
+      width: 300px;
+      height: 315px;
+    }
+  }
+  h3 {
+    @include fontstyle($main-font, 35, 46, $color-light-xl);
+  }
+  a,
+  p {
+    @include fontstyle($main-font, 20, 23, $color-primary);
+  }
+}
+.contacts {
+  min-height: 234px;
+  max-width: 302px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.contacts__email,
+.contacts__phone {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  img {
+    margin-right: 20px;
+  }
+}
+
+.location {
+  min-height: 234px;
+  max-width: 302px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.location__boston,
+.location__london {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  img {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 983px) {
+  footer .maincontainer {
+    justify-content: center;
+    > div {
+      margin: 30px 0 60px 0;
+    }
+  }
+}

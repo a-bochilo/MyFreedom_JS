@@ -1,0 +1,307 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "btn";
+@import "footer_styles";
+
+.maincontainer {
+  max-width: $desktop-width;
+  margin: auto;
+  padding: 0 40px;
+}
+
+.page_about header {
+  min-height: 908px;
+  background: $header-footer-gradient;
+}
+
+.page_about header.header_light {
+  ackground: $header-footer-gradient;
+}
+
+.nav-logo-container {
+  height: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  h1 {
+    @include fontstyle($main-font, 32, 35, $color-primary);
+  }
+  p {
+    @include fontstyle($secondaty-font, 13, 15, $color-light-xl);
+    letter-spacing: 0.1em;
+    padding-top: 10px;
+  }
+}
+nav {
+  .level_1 > li > a {
+    display: none;
+  }
+  .level_2 {
+    display: flex;
+
+    a {
+      @include fontstyle($secondaty-font, 15, 24, $color-dark-s);
+      margin-left: 35px;
+      &:hover {
+        color: $color-light-s;
+      }
+    }
+  }
+}
+
+.page_about .link_about,
+.page_pets .link_pets,
+.page_help .link_lelp,
+.page_contacts .link_contacts,
+a:active {
+  border-bottom: 3px solid $color-primary;
+}
+
+.startscreen-container {
+  min-height: 728px;
+  display: flex;
+  align-items: center;
+  background: url("../images/start-screen-puppy.png") right bottom content-box
+    no-repeat;
+}
+
+.startscreen-content {
+  min-height: 321px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 30px;
+  h2 {
+    @include fontstyle($main-font, 44, 57.2, $color-light-xl);
+    max-width: 325px;
+  }
+  p {
+    @include fontstyle($secondaty-font, 15, 24, $color-dark-s);
+    max-width: 460px;
+    padding-bottom: 30px;
+  }
+}
+
+section:nth-child(even) {
+  background-color: $color-light-l;
+}
+
+.section-about .maincontainer {
+  min-height: 588px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+  img {
+    width: 300px;
+    height: 408px;
+  }
+}
+.section-about_content {
+  padding: 14px 0;
+  width: 380px;
+  display: flex;
+  flex-flow: column nowrap;
+  h3 {
+    @include fontstyle($main-font, 35, 45.5, $color-dark-l);
+    max-width: 370px;
+  }
+  p {
+    padding-top: 25px;
+    @include fontstyle($secondaty-font, 15, 24, $color-dark-xl);
+  }
+}
+
+.section-pets {
+  .maincontainer {
+    min-height: 877px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0 40px 0;
+  }
+  h3 {
+    max-width: 400px;
+    @include fontstyle($main-font, 35, 45, $color-dark-l);
+    text-align: center;
+  }
+}
+.section-pets__carousel {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  a.btn-arrow-r {
+    order: 1;
+  }
+  figure {
+    height: 435px;
+    width: 270px;
+    background-color: $color-light-s;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 9px;
+    padding-bottom: 30px;
+    &:hover {
+      box-shadow: 0px 2px 35px 14px $color-shadow;
+      cursor: pointer;
+    }
+    img {
+      width: 270px;
+      height: 270px;
+    }
+    p {
+      @include fontstyle($main-font, 20, 23, $color-dark-l);
+    }
+  }
+}
+.section-help {
+  .maincontainer {
+    min-height: 609px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0 40px 0;
+  }
+  h3 {
+    max-width: 308px;
+    text-align: center;
+    @include fontstyle($main-font, 35, 45, $color-dark-l);
+  }
+  .section-help__list {
+    min-height: 281px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+  }
+  figure {
+    min-height: 113px;
+    margin: 20px 60px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    @include fontstyle($main-font, 20, 23, $color-dark-l);
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.section-donation {
+  .maincontainer {
+    min-height: 464px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    > img {
+      height: 261px;
+      width: 505px;
+    }
+  }
+  .section-donation__discription {
+    max-width: 380px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 30px;
+    > *:not(h3) {
+      margin-top: 20px;
+    }
+  }
+  h3 {
+    max-width: 308px;
+    @include fontstyle($main-font, 35, 45, $color-dark-l);
+  }
+  h5 {
+    @include fontstyle($main-font, 15, 16.5, $color-dark-l);
+  }
+}
+.section-donation__credit-card-data {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: $color-primary;
+  border-radius: 9px;
+  p {
+    @include fontstyle($main-font, 20, 23, $color-dark-l);
+    margin-left: 15px;
+  }
+}
+.section-donation__legal {
+  @include fontstyle($secondaty-font, 12, 18, $color-dark-m);
+  font-style: italic;
+}
+
+@media (max-width: $desktop-width) {
+  .maincontainer {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .page_about header {
+    min-height: auto;
+  }
+  .startscreen-container {
+    background: none;
+    min-height: max-content;
+  }
+  nav {
+    .level_1 > li {
+      > a {
+        display: block;
+      }
+      position: relative;
+    }
+    .level_2 {
+      display: none;
+    }
+    .level_1 > li:hover .level_2 {
+      display: flex;
+      flex-flow: column nowrap;
+      position: absolute;
+      right: -100%;
+      a {
+        display: block;
+        width: 150px;
+      }
+    }
+  }
+
+  .section-pets__carousel {
+    justify-content: center;
+  }
+  .section-pets__carousel > a {
+    display: none;
+  }
+  .section-pets__carousel figure {
+    margin: 15px;
+  }
+  .section-help__list figure {
+    margin: 10px 20px;
+  }
+  .section-donation .maincontainer > img {
+    display: none;
+  }
+  .section-donation__discription {
+    margin: 0 0 20px 0;
+  }
+}
