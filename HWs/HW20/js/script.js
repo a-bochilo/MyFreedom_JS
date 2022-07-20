@@ -9,13 +9,16 @@ window.addEventListener("scroll", function () {
 const mainBtn = document.getElementById("extraInfoBtn");
 mainBtn.addEventListener("click", async function (e) {
   e.preventDefault();
-  let response = await fetch("https://api.github.com/users/iliakan");
-  let result = await response.json();
-  console.log(result);
-  let resultDiv = document.createElement("div");
-  resultDiv.innerHTML = result;
-  resultDiv.classList.add("extraInfo");
-  mainBtn.after(resultDiv);
+  try {
+    let response = await fetch("https://api.github.com/users/iliakan");
+    let result = await response.json();
+    let resultDiv = document.createElement("div");
+    resultDiv.innerHTML = result;
+    resultDiv.classList.add("extraInfo");
+    mainBtn.after(resultDiv);
+  } catch (error) {
+    console.error(error);
+  }
 });
 
 const switcher = document.querySelector(".switcher");
