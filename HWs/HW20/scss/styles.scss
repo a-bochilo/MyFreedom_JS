@@ -12,11 +12,12 @@
 
 .page_about header {
   min-height: 908px;
-  background: $header-footer-gradient;
+  background-color: $header-footer;
+  transition: background-color 0.5s linear;
 }
 
-.page_about header.header_light {
-  ackground: $header-footer-gradient;
+.page_about header.header_dark {
+  background-color: $header-footer-dark;
 }
 
 .nav-logo-container {
@@ -77,14 +78,31 @@ a:active {
   justify-content: space-between;
   align-items: flex-start;
   padding-bottom: 30px;
+  .switcher {
+    margin-bottom: 30px;
+  }
   h2 {
     @include fontstyle($main-font, 44, 57.2, $color-light-xl);
     max-width: 325px;
   }
+  form {
+    padding: 20px 0;
+  }
   p {
     @include fontstyle($secondaty-font, 15, 24, $color-dark-s);
     max-width: 460px;
-    padding-bottom: 30px;
+    padding: 10px 0;
+  }
+  .invalid-input {
+    box-shadow: 0 0 5px 5px red;
+  }
+  div.extraInfo {
+    @include fontstyle($main-font, 12, 22, $color-dark-3xl);
+    max-width: 460px;
+    margin-top: 10px;
+    padding: 5px 15px;
+    background-color: $color-primary;
+    border-radius: 5px;
   }
 }
 

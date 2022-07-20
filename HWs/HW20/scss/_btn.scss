@@ -7,6 +7,7 @@
 
 .btn-primary {
   background-color: $color-primary;
+  cursor: pointer;
 }
 
 .btn-secondary {
@@ -52,7 +53,12 @@
   background-color: $color-primary;
 }
 
-.btn:hover,
+.btn-switcher {
+  box-shadow: 0 0 5px 10px rgba(241, 205, 179, 0.3),
+    inset 0 0 4px 4px rgba(255, 255, 255, 0.2);
+}
+
+.btn:hover:not(.btn-disabled),
 .btn-arrow:hover,
 .btn-pages:hover:not(.btn-disabled) {
   background-color: $color-primary-light;

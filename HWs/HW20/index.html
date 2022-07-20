@@ -34,13 +34,30 @@
         </div>
         <div class="startscreen-container">
           <div class="startscreen-content">
-            <h2>Not only people need a house</h2>
-            <p>
-              We offer to give a chance to a little and nice puppy with an
-              extremely wide and open heart. He or she will love you more than
-              anybody else in the world, you will see!
-            </p>
-            <a href="" class="btn btn-primary">Make a friend</a>
+            <div class="switcher">
+              <a href="" class="btn btn-primary">Press A</a>
+              <a href="" class="btn btn-primary">Press B</a>
+            </div>
+            <a href="" id="extraInfoBtn" class="btn btn-primary"
+              >Show more info!</a
+            >
+            <form name="loginForm" action="">
+              <p>
+                <label for="user">User name</label>
+                <input type="text" name="user" id="user" />
+              </p>
+              <p>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" />
+              </p>
+              <p>
+                <label for="checkbox">I accept</label>
+                <input type="checkbox" name="confirm" id="confirm" />
+              </p>
+              <button type="submit" name="submit" class="btn btn-disabled">
+                Log in
+              </button>
+            </form>
           </div>
         </div>
       </div>
