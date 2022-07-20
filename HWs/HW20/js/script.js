@@ -59,8 +59,8 @@ loginForm.submit.addEventListener("click", function (e) {
   if (loginForm.submit.classList.contains("btn-disabled")) return;
   if (document.getElementById("formErr"))
     document.getElementById("formErr").remove();
-  for (let i = 0; i < loginForm.elements.length; i++) {
-    if (loginForm.elements[i].classList.contains("invalid-input")) {
+  for (let el of loginForm.elements) {
+    if (el.classList.contains("invalid-input")) {
       const err = document.createElement("p");
       err.innerHTML = "Please, enter correct data in highlighted fields";
       err.style.color = "red";
