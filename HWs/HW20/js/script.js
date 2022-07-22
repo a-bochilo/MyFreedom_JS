@@ -2,20 +2,19 @@
 
 window.addEventListener("scroll", function () {
   const header = document.querySelector(".page_about header");
-  if (scrollY > 0) header.classList.add("header_dark");
-  if (scrollY === 0) header.classList.remove("header_dark");
+  if (scrollY > 0) header.classList.toggle("header_dark");
 });
 
-const mainBtn = document.getElementById("extraInfoBtn");
-mainBtn.addEventListener("click", async function (e) {
+const extraInfoBtn = document.getElementById("extraInfoBtn");
+extraInfoBtn.addEventListener("click", async function (e) {
   e.preventDefault();
   try {
-    let response = await fetch("https://api.github.com/users/iliakan");
+    let response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
     let result = await response.json();
     let resultDiv = document.createElement("div");
-    resultDiv.innerHTML = result;
     resultDiv.classList.add("extraInfo");
-    mainBtn.after(resultDiv);
+    resultDiv.innerHTML = JSON.stringify(result);
+    extraInfoBtn.after(resultDiv);
   } catch (error) {
     console.error(error);
   }
@@ -34,13 +33,13 @@ switcher.addEventListener("click", function (e) {
 
 const loginForm = document.forms.loginForm;
 loginForm.addEventListener("focusout", function (e) {
-  let field = e.target.closest("input");
-  if (field.getAttribute("type") === "checkbox") return;
-  if (field.value.trim().length < 3) {
-    field.classList.add("invalid-input");
+  let input = e.target.closest("input");
+  if (input.getAttribute("type") === "checkbox") return;
+  if (input.value.trim().length < 3) {
+    input.classList.add("invalid-input");
   } else {
-    if (field.classList.contains("invalid-input"))
-      field.classList.remove("invalid-input");
+    if (input.classList.contains("invalid-input"))
+      input.classList.remove("invalid-input");
   }
 });
 
